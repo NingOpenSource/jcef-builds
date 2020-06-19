@@ -21,7 +21,7 @@ The below requirements must be met to build JCEF.
 1. `CMake` version 2.8.12.1 or newer.
 1. `Linux` requirements: Currently supported distributions include Debian Wheezy, Ubuntu Precise, and related. Ubuntu 14.04 64-bit is recommended. Newer versions will likely also work but may not have been tested.
 1.  Required packages include:
-    ```
+    ```shell
     build-essential
     libgtk2.0-dev
     ```
@@ -52,28 +52,28 @@ To perform a `Linux` build using a 32-bit `CEF` binary distribution on a 32-bit 
     
 To perform a `Mac OS X` build using a 64-bit `CEF` binary distribution:
 1.  Using the `Xcode` IDE:
-    ```
+    ```shell
     > cmake -G "Xcode" -DPROJECT_ARCH="x86_64" ..
     ```
     Open `jcef.xcodeproj` in `Xcode` and select Product > Build.
 1.  Using `Unix Makefiles`:
-    ```
+    ```shell
     > cmake -G "Unix Makefiles" -DPROJECT_ARCH="x86_64" -DCMAKE_BUILD_TYPE=Debug ..
     > make -j4
     ```
 1.  Using `Ninja`:
-    ```
+    ```shell
     > cmake -G "Ninja" -DPROJECT_ARCH="x86_64" -DCMAKE_BUILD_TYPE=Debug ..
     > ninja
     ```
 To perform a `Windows` build using a 32-bit `CEF` binary distribution:
 1.  Using the `Visual Studio 2015 IDE`:
-    ```
+    ```shell
     > cmake -G "Visual Studio 14" ..
     ```
     Open `jcef.sln` in `Visual Studio` and select Build > Build Solution.
 1.  Using `Ninja` with `Visual Studio 2015` command-line tools:
-    ```
+    ```shell
     (this path may be different depending on your Visual Studio installation)
     > "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\vcvars32.bat"
     > cmake -G "Ninja" -DCMAKE_BUILD_TYPE=Debug ..
@@ -81,12 +81,12 @@ To perform a `Windows` build using a 32-bit `CEF` binary distribution:
     ```
 To perform a `Windows` build using a 64-bit `CEF` binary distribution:
 1.  Using the `Visual Studio 2015 IDE`:
-    ```
+    ```shell
     > cmake -G "Visual Studio 14 Win64" ..
     ```
     Open `jcef.sln` in `Visual Studio` and select Build > Build Solution.
 1.  Using `Ninja` with `Visual Studio 2015` command-line tools:
-    ```
+    ```shell
     (this path may be different depending on your Visual Studio installation)
     > "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64\vcvars64.bat"
     > cmake -G "Ninja" -DCMAKE_BUILD_TYPE=Debug ..
